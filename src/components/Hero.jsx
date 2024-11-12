@@ -55,7 +55,7 @@ const Hero = () => {
         <img 
           src={p1} 
           alt="Hero Image" 
-          className="w-96 rounded-2xl mr-8 h-full"
+          className="object-fit w-96 rounded-2xl mr-8"
         />
       </div>
     </motion.section>

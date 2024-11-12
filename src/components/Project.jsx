@@ -27,7 +27,7 @@ const Project = () => {
             <h1 className='pt-20 text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-blue-800 to-teal-200 bg-clip-text antialiased font-sans text-transparent'>My Latest Projects</h1>
         </div>
         <div className='mt-16 text-white text-center ml-64 mr-64 justify-center items-center flex'>
-            <p className='text-gray-400 antialiased'>I’ve developed a comprehensive LMS for efficient school management, streamlining administration and learning processes. Additionally, I created an eCommerce platform that enhances user experience.</p>
+            <p className='text-gray-400 antialiased hidden md:block'>I’ve developed a comprehensive LMS for efficient school management, streamlining administration and learning processes. Additionally, I created an eCommerce platform that enhances user experience.</p>
         </div>
         <div className="text-center py-16 flex items-center justify-center mx-auto">
       <nav className="mx-auto text-center">
@@ -38,7 +38,7 @@ const Project = () => {
                 onClick={() => setActiveTab(tab.label)}
                 className={`
                   relative px-5 py-1.5 rounded-full text-sm font-medium
-                  transition-all duration-300 ease-in-out text-center text-xl
+                  transition-all duration-300 ease-in-out text-center text-sm
                   ${activeTab === tab.label 
                     ? 'bg-[#0A1627] text-[#3B82F6] ring-1 ring-[#1D4ED8]/30  before:absolute before:inset-0 before:rounded-full before:ring-1 before:ring-[#3B82F6]/20 before:shadow-[0_0_8px_rgba(59,130,246,0.3)] before:-z-10' 
                     : 'bg-[#0A1627] text-[#799ab5] hover:text-[#3B82F6] ring-1 ring-cyan-500/30'}
