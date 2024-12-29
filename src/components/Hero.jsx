@@ -25,7 +25,7 @@ const Hero = () => {
         <TypeAnimation
       sequence={[
         // Same substring at the start will only be typed out once, initially
-        "I'm Prashanna Sapkota.",
+        "I'm Shikhar Bahik Magar",
         1500, // wait 1s before replacing "Mice" with "Hamsters"
         "A Passionate Web Developer.",
         1500,
@@ -38,20 +38,14 @@ const Hero = () => {
     />
       </div>
        <div className='sm:w-[66%] mt-4 md:mt-6'>
-       <p className="text-gray-400 text-xs sm:mt-6 mb-6">
-       "I'm a web developer focused on building user-friendly web applications.
-        I transform concepts into beautiful, functional websites.
-        Check out my projects and get in touch!"
-        </p>
+        <p className="text-gray-400 text-xs sm:mt-6 mb-6">
+        "I'm a web developer focused on building user-friendly web applications.
+          I transform concepts into beautiful, functional websites.
+          Check out my projects and get in touch!"
+          </p>
        </div>
-        <a 
-          href="#"
-          className="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
-        >
-          Get Started
-        </a>
       </div>
-      <div className="">
+      <div className="mt-[-100px]">
         <img 
           src={p1} 
           alt="Hero Image" 

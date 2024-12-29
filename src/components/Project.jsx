@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import overlay from '../assets/overlay.png';
+import cephas from '../assets/cephas.png';
+import gyhealth from '../assets/gyhealth.png';
+import publicbuilders from '../assets/publicbuilders.png';
 
 const Project = () => {
 
@@ -56,89 +59,96 @@ const Project = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Flyer Design Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
+         <a href="https://cephasholdings.com/" target="_blank">
+           <div className="group relative rounded-2xl overflow-hidden">
             <div className="aspect-square relative">
               <img 
-                src="https://ehwmisgwycz.exactdn.com/wp-content/uploads/2020/06/lms-features-1.jpg?strip=all&lossy=1&resize=1140%2C599&ssl=1" 
+                src={cephas} 
                 alt="Flyer design"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full relative object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
               />
               <div className="absolute inset-0  bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
               <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">Mistery Message</h3>
-                <p className="text-sm text-gray-400 text-gray-300 font-sans">
+                <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">CEPHAS</h3>
+                <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
                 </p>
               </div>
             </div>
           </div>
+         </a>
 
           {/* Banner Design Card */}
+         <a href="https://publicbuilders.com.np/" target="_blank">
+         <div className="group relative rounded-2xl overflow-hidden">
+            <div className="aspect-square relative">
+              <img 
+                src={publicbuilders}
+                alt="Banner design"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">Public Builders</h3>
+                <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+         </a>
+ 
+          {/* Disk Cover Card */}
+         <a href="https://gyhealthcare.my/" target='_blank'>
+         <div className="group relative rounded-2xl overflow-hidden">
+            <div className="aspect-square relative">
+              <img 
+                src={gyhealth}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">GY Health-Care</h3>
+                <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+         </a>
+
+          {/* Pattern Design Card */}
+          <a target='_blank' href="https://bahik.tech">
           <div className="group relative rounded-2xl overflow-hidden">
             <div className="aspect-square relative">
+             <img 
+                src="https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png" 
+                alt="Pattern design"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
+              />
+            
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
+              <div className="absolute bottom-0 left-0 p-6">
+                <h3 className="text-2xl font-semibold opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-white mb-2 text-gray-400 font-sans">Youtube Clone</h3>
+                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
+                </p>
+              </div>
+            </div>
+          </div>
+          </a>
+          {/* Logo Design Card */}
+          <div className="group relative rounded-2xl overflow-hidden">
+          <div className="aspect-square relative">
               <img 
                 src="https://edusuitepk.b-cdn.net/wp-content/uploads/2021/12/Fee-Management-.jpg" 
                 alt="Banner design"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
               <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">Library Management System</h3>
-                <p className="text-sm text-gray-400 text-gray-300 font-sans">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Disk Cover Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src="https://asset.gecdesigns.com/img/isometric-illustration/the-future-of-retail-e-commerce-concept-vector-illustration-1682432685910-cover.webp" 
-                alt="Disk cover"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">E-commerce</h3>
-                <p className="text-sm text-gray-400 text-gray-300 font-sans">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Pattern Design Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src="https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png" 
-                alt="Pattern design"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">Youtube Clone</h3>
-                <p className="text-sm text-gray-400">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Logo Design Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src="https://media.licdn.com/dms/image/D4D12AQF4wPzUFfzVlQ/article-cover_image-shrink_600_2000/0/1715864980954?e=2147483647&v=beta&t=tNg7VcV8mPDYPi-7U86jFmNHdMjytZv_LoOChd5E9ZI" 
-                alt="Logo design"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
-              />
-              <div className="absolute inset-0  bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">Blog</h3>
-                <p className="text-sm text-gray-400 text-gray-300 font-sans">
+                <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">Library Management System</h3>
+                <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
                 </p>
               </div>
@@ -149,14 +159,14 @@ const Project = () => {
           <div className="group relative rounded-2xl overflow-hidden">
             <div className="aspect-square relative">
               <img 
-                src="https://www.mobicommerce.net/wp-content/uploads/2020/05/multivendor-marketplace-ecommerce-trend.jpg" 
-                alt="Animal pattern"
-                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                src="https://asset.gecdesigns.com/img/isometric-illustration/the-future-of-retail-e-commerce-concept-vector-illustration-1682432685910-cover.webp" 
+                alt="Disk cover"
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110 transition-all duration-1000 ease-in-out"
               />
               <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
               <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold text-white mb-2 text-gray-400 font-sans">Mutli-vendor E-commerce</h3>
-                <p className="text-sm text-gray-400 text-gray-300 font-sans">
+                <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">E-commerce</h3>
+                <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
                 </p>
               </div>
