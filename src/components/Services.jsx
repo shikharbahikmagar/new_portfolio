@@ -1,84 +1,91 @@
-import React from 'react'
-import Lottie from 'lottie-react'
-import designer from '../assets/lotiie/designer.json'
-import { motion } from 'framer-motion'
 
+import { Code, Palette, Globe, Smartphone,  Rocket, Megaphone } from 'lucide-react'
 
 const Services = () => {
-  return (
+  const services = [
+    {
+      icon: <Code size={40} />,
+      title: "Web Development",
+      description: "Custom websites and web applications built with modern technologies and best practices for optimal performance."
+    },
+    {
+      icon: <Smartphone size={40} />,
+      title: "Mobile Development",
+      description: "Native and cross-platform mobile applications designed for seamless user experience across all devices."
+    },
+    {
+      icon: <Palette size={40} />,
+      title: "UI/UX Design",
+      description: "User-centered design solutions that combine aesthetics with functionality to create engaging digital experiences."
+    },
+    {
+      icon: <Globe size={40} />,
+      title: "Digital Strategy",
+      description: "Strategic planning and consultation to help businesses thrive in the digital landscape."
+    },
+    {
+      icon: <Rocket size={40} />,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and deployment solutions to power your digital transformation."
+    },
+    {
+      icon: <Megaphone size={40} />,
+      title: "Digital Marketing",
+      description: "Result-driven digital marketing strategies to boost your online presence and reach target audiences."
+    }
+  ]
 
-    <div className='md:-mt-20 bg-gradient-to-bl flex items-center justify-center from-sky-950 via-gray-900 to-sky-950'>
-      <div className='h-[600px] bg-[#141C33] md:ml-32 md:mr-32 rounded-2xl sm:ml-16 sm:mr-16 min-w-64 min-h-96 min-w-40' >
-      <div className='grid grid-cols-3 m-8'>
-      <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8'
-             initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
+  return (
+    <div className='min-h-screen w-full py-8 md:py-16  mt-[-70px] relative'>
+      {/* Background Image with Overlay */}
+      <div 
+        className='absolute inset-0 z-0 bg-cover bg-center bg-no-repeat'
+        style={{
+          backgroundImage: 'url("/api/placeholder/1920/1080")',
+          backgroundAttachment: 'fixed'
+        }}
+      >
+        <div className='absolute inset-0 bg-gradient-to-tr from-sky-950 via-gray-900 antialiased to-sky-950'></div>
       </div>
-         <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8' 
-            initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
+
+      {/* Content */}
+      <div className='relative z-10 h-auto mx-4 md:mx-8 lg:mx-32'>
+        <div className='text-center mb-12'>
+          <h2 className='text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4'>Services</h2>
+          <p className='text-gray-300 text-lg max-w-2xl mx-auto'>Empowering your digital journey with comprehensive solutions tailored to your needs</p>
+        </div>
+
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
+          {services.map((service, index) => (
+            <div 
+              key={index}
+              className='group relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm
+                border border-gray-800 hover:border-sky-500
+                transform hover:-translate-y-2 transition-all duration-300
+                hover:shadow-[0_0_30px_rgba(14,165,233,0.15)]'
+            >
+              <div className='space-y-4'>
+                <div className='text-sky-500 group-hover:text-sky-400 transition-colors duration-300'>
+                  {service.icon}
+                </div>
+                
+                <h3 className='text-white text-xl md:text-2xl font-semibold group-hover:text-sky-400 transition-colors duration-300'>
+                  {service.title}
+                </h3>
+                
+                <p className='text-gray-400 group-hover:text-gray-300 transition-colors duration-300 text-sm md:text-base leading-relaxed'>
+                  {service.description}
+                </p>
+                
+                <div className='absolute bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
+                  <span className='text-sky-500 text-sm font-medium'>Learn More →</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
-         <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8' 
-            initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
-      </div>
-         <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8' 
-            initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
-      </div>
-         <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8' 
-            initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
-      </div>
-         <div className='min-h-64 min-w-40 hover:shadow-2xl hover:scale-110 hover:rounded-2xl transition-all ease-in-out delay-400 duration-500 hover:bg-[#263B57]'>
-            <motion.div className='m-8' 
-            initial={{ x: 100,
-              opacity: 0 }}
-              animate={{ x: 20, opacity: 1 }}
-              transition={{ delay: .1, type: 'spring', stiffness: 50 }}>
-                <Lottie className='w-[100px] h-[100px] mr-60' animationData={designer} loop={true} />
-            <h1 className='text-left text-white text-xl'>Motion & Web Graphy</h1>
-            <p className='text-left text-gray-400 text-xs mt-4 hidden'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam, quo dolore adipisci ipsum doloribus voluptatem est cum inventore ipsa? Voluptatum, veniam veritatis modi alias fugiat ad eligendi dolore autem iure.</p>
-            </motion.div>
-      </div>
-      </div>
-      </div>
-      </div>
+    </div>
   )
 }
 

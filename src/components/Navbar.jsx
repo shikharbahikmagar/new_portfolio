@@ -147,49 +147,58 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Enhanced Sidebar */}
-          <motion.div
-            className={`fixed top-0 right-0 h-full z-10 w-96 bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 transform transition-all duration-500 ease-out border-l border-sky-900/50 ${
+         {/* Enhanced Sidebar with new design */}
+         <motion.div
+            className={`fixed top-0 right-0 h-auto z-10 sm:w-86 w-80 lg:w-[30em] transform transition-all duration-500 ease-out border-l border-sky-900/50 backdrop-blur-md ${
               isOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
             }`}
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? 0 : "100%" }}
             transition={{ type: "spring", damping: 20 }}
           >
-            {/* Sidebar Header */}
-            <motion.div 
-              className="absolute top-0 left-0 right-0 p-8 bg-gradient-to-b from-sky-950 to-transparent"
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-            >
-            </motion.div>
+            {/* New Menu Layout */}
+            <div className="h-full flex flex-col">
+              {/* Top Section with Brand */}
+              <motion.div 
+                className="p-8 border-b border-sky-800/20"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <h2 className="text-3xl font-bold text-white mb-2 bg-gradient-to-r from-sky-400 to-blue-500 bg-clip-text text-transparent">Navigation</h2>
+                <p className="text-gray-400">Explore my portfolio sections</p>
+              </motion.div>
 
-            {/* Menu Items */}
-            <motion.div 
-              className="flex flex-col  items-start justify-center h-full px-12 space-y-8"
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.3 }}
-            >
-              <MenuLink icon={<Home className="w-5 h-5" />} text="Home" />
-              <MenuLink icon={<Code className="w-5 h-5" />} text="Skills" />
-              <MenuLink icon={<Briefcase className="w-5 h-5" />} text="Projects" />
-              <MenuLink icon={<User className="w-5 h-5" />} text="About" />
-              <MenuLink icon={<Mail className="w-5 h-5" />} text="Contact" />
-            </motion.div>
+              {/* Menu Items with new styling */}
+              <motion.div 
+                className="flex-1 px-6 py-8 space-y-2 overflow-y-auto scrollbar-hide"
+                initial={{ opacity: 0, x: 20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3 }}
+              >
+                <div className="space-y-6">
+                  <MenuLink icon={<Home className="w-5 h-5" />} text="Home" />
+                  <MenuLink icon={<Code className="w-5 h-5" />} text="Skills" />
+                  <MenuLink icon={<Briefcase className="w-5 h-5" />} text="Projects" />
+                  <MenuLink icon={<User className="w-5 h-5" />} text="About" />
+                  <MenuLink icon={<Mail className="w-5 h-5" />} text="Contact" />
+                </div>
+              </motion.div>
 
-            {/* Sidebar Footer */}
-            <motion.div 
-              className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-sky-950 to-transparent"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-            >
-              <p className="text-sm text-gray-400 text-center">© 2024 Portfolio</p>
-            </motion.div>
+              {/* Footer with enhanced design */}
+              <motion.div 
+                className="p-8 border-t border-sky-800/20 bg-gradient-to-t from-sky-950/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <p className="text-sm text-gray-400 text-center">© 2024 Portfolio</p>
+                  <div className="h-1 w-16 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full"></div>
+                </div>
+              </motion.div>
+            </div>
           </motion.div>
-
           {/* Overlay */}
               {/* Overlay */}
               <div
