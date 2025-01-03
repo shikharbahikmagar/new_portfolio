@@ -97,7 +97,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className='bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 bg-transparent'>
+      <div className='pt-6 bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 bg-transparent'>
         <motion.nav 
           className="bg-transparent"
           initial={{ y: -20, opacity: 0 }}
