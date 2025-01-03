@@ -6,7 +6,7 @@ const Footer = () => {
     {
       title: "Project Showcase",
       description: "Full-stack web applications built with modern technologies including React, Node.js, and MongoDB. Implemented real-time features and responsive design patterns.",
-      tech: ["React", "Node.js", "MongoDB", "Socket.IO"],
+      tech: ["Laravel", "Bootstrap", "React", "Node.js", "MongoDB", "Socket.IO", "Tailwind"],
       icon: <Code className="w-6 h-6" />
     },
     {
