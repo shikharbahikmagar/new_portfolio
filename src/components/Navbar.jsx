@@ -1,89 +1,213 @@
-import React from 'react'
-import Hero from './Hero'
-import{ motion} from 'framer-motion'
+import React, { useState } from 'react';
+import { Menu, X, Phone, Code, User, Briefcase, Mail, Home, Send } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Hero from './Hero';
+
+// Define MenuLink component with enhanced animations
+const MenuLink = ({ icon, text }) => (
+  <motion.a
+    href={`#${text.toLowerCase()}`}
+    className="group flex items-center space-x-3 text-gray-300 hover:text-white w-full transition-all duration-300 hover:translate-x-2"
+    whileHover={{ x: 10 }}
+    whileTap={{ scale: 0.98 }}
+  >
+    {icon && (
+      <motion.span 
+        className="p-2 rounded-lg bg-sky-900 group-hover:bg-sky-800 transition-colors duration-300 border border-sky-700 group-hover:border-sky-500"
+        whileHover={{ rotate: 5 }}
+        whileTap={{ scale: 0.95 }}
+      >
+        {icon}
+      </motion.span>
+    )}
+    <span className="text-lg font-medium group-hover:text-sky-400">{text}</span>
+  </motion.a>
+);
+
+// Contact Form Component
+const ContactForm = ({ isOpen, onClose }) => (
+  <AnimatePresence>
+    {isOpen && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center"
+        onClick={onClose}
+      >
+        <motion.div
+          initial={{ scale: 0.8, y: 50 }}
+          animate={{ scale: 1, y: 0 }}
+          exit={{ scale: 0.8, y: 50 }}
+          className="bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 p-8 rounded-2xl w-full max-w-md m-4 border border-sky-800/30"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-white">Contact Me</h2>
+            <button
+              onClick={onClose}
+              className="p-2 hover:bg-sky-800/20 rounded-lg transition-colors"
+            >
+              <X className="w-6 h-6 text-gray-400 hover:text-white" />
+            </button>
+          </div>
+          
+          <form className="space-y-4">
+            <div>
+              <label className="block text-gray-400 mb-2">Name</label>
+              <input
+                type="text"
+                className="w-full px-4 py-2 rounded-lg bg-sky-900/50 border border-sky-800/50 focus:border-sky-500 text-white outline-none transition-all"
+                placeholder="Your name"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-400 mb-2">Email</label>
+              <input
+                type="email"
+                className="w-full px-4 py-2 rounded-lg bg-sky-900/50 border border-sky-800/50 focus:border-sky-500 text-white outline-none transition-all"
+                placeholder="your@email.com"
+              />
+            </div>
+            <div>
+              <label className="block text-gray-400 mb-2">Message</label>
+              <textarea
+                className="w-full px-4 py-2 rounded-lg bg-sky-900/50 border border-sky-800/50 focus:border-sky-500 text-white outline-none transition-all h-32 resize-none"
+                placeholder="Your message..."
+              />
+            </div>
+            <motion.button
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              className="w-full py-3 px-6 bg-sky-600 hover:bg-sky-500 text-white rounded-lg flex items-center justify-center space-x-2 transition-colors"
+            >
+              <Send className="w-4 h-4" />
+              <span>Send Message</span>
+            </motion.button>
+          </form>
+        </motion.div>
+      </motion.div>
+    )}
+  </AnimatePresence>
+);
 
 const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <>
-<div className='bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950'>
-<motion.nav className=""
-         initial={{ y: -20, opacity: 0 }}
-         animate={{ y: 0, opacity: 1 }}
-         transition={{ delay: .1, type: 'spring', stiffness: 100 }}>
-
-  <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-    <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="https://flowbite.com/docs/images/logo.svg" className="h-8" alt="Flowbite Logo" />
-        <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Logo</span>
-    </a>
-    <button data-collapse-toggle="navbar-multi-level" type="button" className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-multi-level" aria-expanded="false">
-        <span className="sr-only">Open main menu</span>
-        <svg className="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
-    <div className="hidden w-full md:block md:w-auto" id="navbar-multi-level">
-      <ul className="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
-        <li>
-          <a href="#" className="block py-2 px-3 text-white rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
-        </li>
-        <li>
-            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" className="flex items-center justify-between w-full py-2 px-3 text-gray-900 hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-white md:dark:hover:text-blue-500 dark:focus:text-white dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Dropdown <svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
-            <div id="dropdownNavbar" className="z-10 hidden font-normal bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
-                <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownLargeButton">
-                  <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                  </li>
-                  <li aria-labelledby="dropdownNavbarLink">
-                    <button id="doubleDropdownButton" data-dropdown-toggle="doubleDropdown" data-dropdown-placement="right-start" type="button" className="flex items-center justify-between w-full px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dropdown<svg className="w-2.5 h-2.5 ms-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
-  </svg></button>
-                    <div id="doubleDropdown" className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                        <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="doubleDropdownButton">
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Overview</a>
-                          </li>
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">My downloads</a>
-                          </li>
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Billing</a>
-                          </li>
-                          <li>
-                            <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Rewards</a>
-                          </li>
-                        </ul>
-                    </div>
-                  </li>
-                  <li>
-                    <a href="#" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                  </li>
-                </ul>
-                <div className="py-1">
-                  <a href="#" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign out</a>
+      <div className='bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 bg-transparent'>
+        <motion.nav 
+          className="bg-transparent"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{ delay: .1, type: 'spring', stiffness: 100 }}
+        >
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="flex items-center justify-between h-20">
+              {/* Logo */}
+              <motion.div 
+                className="flex-shrink-0"
+                whileHover={{ scale: 1.05 }}
+              >
+                <div className="text-white font-bold text-2xl group">
+                  <span className="inline-block transform transition-all duration-300 hover:-translate-y-1 hover:text-sky-400">&lt;</span>
+                  <span className="inline-block transform transition-all duration-300 group-hover:text-sky-400">Dev</span>
+                  <span className="inline-block transform transition-all duration-300 hover:-translate-y-1 hover:text-sky-400">/&gt;</span>
                 </div>
+              </motion.div>
+
+              <div className="flex items-center space-x-16">
+                {/* Contact Button */}
+                <motion.button
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsContactOpen(true)}
+                  className="flex items-center px-6 py-2 rounded-full bg-sky-900 hover:bg-sky-800 text-white transition-all duration-300 border border-sky-700 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/20"
+                >
+                  <Phone className="h-4 w-4 mr-2" />
+                  Contact
+                </motion.button>
+
+                {/* Menu Toggle Button */}
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="relative z-[11] p-3 rounded-full bg-sky-900 hover:bg-sky-800 transition-all duration-300 border border-sky-700 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/20"
+                >
+                  {isOpen ? (
+                    <X className="h-6 w-6 text-white" />
+                  ) : (
+                    <Menu className="h-6 w-6 text-white" />
+                  )}
+                </motion.button>
+              </div>
             </div>
-        </li>
-        <li>
-          <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Services</a>
-        </li>
-        <li>
-          <a href="#projects" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Projects</a>
-        </li>
-        <li>
-          <a href="#" className="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Contact</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-    </motion.nav>
+          </div>
 
-    <Hero />
-</div>
+          {/* Enhanced Sidebar */}
+          <motion.div
+            className={`fixed top-0 right-0 h-full z-10 w-96 bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 transform transition-all duration-500 ease-out border-l border-sky-900/50 ${
+              isOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
+            }`}
+            initial={{ x: "100%" }}
+            animate={{ x: isOpen ? 0 : "100%" }}
+            transition={{ type: "spring", damping: 20 }}
+          >
+            {/* Sidebar Header */}
+            <motion.div 
+              className="absolute top-0 left-0 right-0 p-8 bg-gradient-to-b from-sky-950 to-transparent"
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+            >
+            </motion.div>
+
+            {/* Menu Items */}
+            <motion.div 
+              className="flex flex-col  items-start justify-center h-full px-12 space-y-8"
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.3 }}
+            >
+              <MenuLink icon={<Home className="w-5 h-5" />} text="Home" />
+              <MenuLink icon={<Code className="w-5 h-5" />} text="Skills" />
+              <MenuLink icon={<Briefcase className="w-5 h-5" />} text="Projects" />
+              <MenuLink icon={<User className="w-5 h-5" />} text="About" />
+              <MenuLink icon={<Mail className="w-5 h-5" />} text="Contact" />
+            </motion.div>
+
+            {/* Sidebar Footer */}
+            <motion.div 
+              className="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-sky-950 to-transparent"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4 }}
+            >
+              <p className="text-sm text-gray-400 text-center">© 2024 Portfolio</p>
+            </motion.div>
+          </motion.div>
+
+          {/* Overlay */}
+              {/* Overlay */}
+              <div
+            onClick={() => setIsOpen(false)}
+            className={`fixed inset-0 bg-black/20 transition-opacity  duration-500 ${
+              isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+            }`}
+          />
+    
+        </motion.nav>
+
+        <Hero />
+      </div>
+      
+      {/* Contact Form Modal */}
+      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

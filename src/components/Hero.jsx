@@ -1,5 +1,5 @@
 // Hero.js
-import React from 'react';
+
 import p1 from '../assets/p1.png';
 import { TypeAnimation } from 'react-type-animation';
 import overlay from '../assets/overlay.png';
