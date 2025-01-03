@@ -77,12 +77,6 @@ const Footer = () => {
                 ))}
               </div>
 
-              <div className="mt-4 flex justify-end">
-                <button className="text-sky-400 hover:text-sky-300 transition-colors flex items-center space-x-1">
-                  <span>Learn More</span>
-                  <ExternalLink className="w-4 h-4" />
-                </button>
-              </div>
             </div>
           ))}
         </div>
