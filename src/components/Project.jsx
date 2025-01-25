@@ -59,7 +59,7 @@ const Project = () => {
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Flyer Design Card */}
-         <a href="https://cephasholdings.com/demo" target="_blank">
+         <a href="https://cephasholdings.com" target="_blank">
            <div className="group relative rounded-2xl overflow-hidden">
             <div className="aspect-square relative">
               <img 
