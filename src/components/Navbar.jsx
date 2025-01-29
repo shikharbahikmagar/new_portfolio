@@ -193,7 +193,7 @@ const Navbar = () => {
                 transition={{ delay: 0.4 }}
               >
                 <div className="flex flex-col items-center space-y-4">
-                  <p className="text-sm text-gray-400 text-center">© 2024 Portfolio</p>
+                  <p className="text-sm text-gray-400 text-center">© 2025 shikhar</p>
                   <div className="h-1 w-16 bg-gradient-to-r from-sky-400 to-blue-500 rounded-full"></div>
                 </div>
               </motion.div>

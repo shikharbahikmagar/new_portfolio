@@ -71,7 +71,7 @@ const Project = () => {
               <div className="absolute bottom-0 left-0 p-6">
                 <h3 className="text-2xl font-semibold text-white mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">CEPHAS</h3>
                 <p className="text-sm text-gray-400 text-gray-300 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat vitae risus eget maximus. Pellentesque euismod.
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat
                 </p>
               </div>
             </div>
