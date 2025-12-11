@@ -1,180 +1,212 @@
 import { useState } from 'react';
-import overlay from '../assets/overlay.png';
-import cephas from '../assets/cephas.png';
-import gyhealth from '../assets/gyhealth.png';
-import publicbuilders from '../assets/publicbuilders.png';
+import { ExternalLink } from 'lucide-react';
 
 const Project = () => {
+  const [activeTab, setActiveTab] = useState('All');
 
-      const [activeTab, setActiveTab] = useState('All');
-      
-      const tabs = [
-        { id: 'web', label: 'Web Development' },
-        { id: 'mobile', label: 'Mobile App' },
-        { id: 'motion', label: 'Motion' },
-        { id: 'graphic', label: 'Graphic Design' }
-      ];
-    
+  const tabs = [
+    { id: 'all', label: 'All' },
+    { id: 'nepal', label: '🇳🇵 Nepal' },
+    { id: 'malaysia', label: '🇲🇾 Malaysia' }
+  ];
+
+  const projects = [
+    {
+      title: "Cephas Investment & Holdings",
+      description: "Investment-holdings company active in real estate, start-up, agriculture, hydropower and fund/asset management; also developing a luxury villa project 'Genesis Villa' in Pokhara.",
+      tags: ["Real Estate", "Investments", "Fund Management", "Consultancy"],
+      link: "https://cephasholdings.com/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "nepal",
+      image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
+    },
+    {
+      title: "GS Sparkle Cleaning Services",
+      description: "Corporate website for a cleaning-service company — offering home and office cleaning, deep-cleaning, and commercial cleaning packages; booking and payments integrated.",
+      tags: ["Corporate", "Service Website", "Booking System"],
+      link: "https://gssparkle.com/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "malaysia",
+      image: "https://gssparkle.com/storage/images/hero/1740641690.jpg"
+    },
+    {
+      title: "Miracle Institute",
+      description: "Educational consultancy/agency providing study-abroad services (USA, UK, Canada, Australia, New Zealand), visa guidance, test preparation (IELTS, TOEFL, SAT, GRE, GMAT, Duolingo).",
+      tags: ["Education Portal", "Consultancy", "Test Preparation"],
+      link: "https://miracle.edu.np/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "nepal",
+      image: "https://miracle.edu.np/storage/images/about/1755501868.jpg"
+    },
+    {
+      title: "Snake Conservation Society Nepal",
+      description: "Non-profit organization website for snake conservation and awareness in Nepal — promoting snake rescue & relocation, human-snake conflict mitigation, research, and public awareness campaigns.",
+      tags: ["NGO Website", "Conservation", "Wildlife"],
+      link: "https://scsn.org.np/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "nepal",
+      image: "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=800&q=80"
+    },
+    {
+      title: "GY Healthcare",
+      description: "Healthcare platform providing comprehensive medical services and health management solutions.",
+      tags: ["Healthcare", "Medical Services", "Platform"],
+      link: "https://gyhealthcare.my/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "malaysia",
+      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
+    },
+    {
+      title: "YouTube Clone",
+      description: "Video streaming platform clone with modern UI/UX, featuring video upload, playback, and user interaction capabilities.",
+      tags: ["Video Platform", "Streaming", "Social Media"],
+      link: "https://youtube-clone-ten-coral.vercel.app/",
+      company: "Personal Project",
+      contribution: "Solo",
+      country: "nepal",
+      image: "https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png"
+    },
+  ];
+
+  const getFilteredProjects = () => {
+    if (activeTab === 'All') return projects;
+    if (activeTab === '🇳🇵 Nepal') return projects.filter(p => p.country === 'nepal');
+    if (activeTab === '🇲🇾 Malaysia') return projects.filter(p => p.country === 'malaysia');
+    return projects;
+  };
+
+  const filteredProjects = getFilteredProjects();
+
+  const getContributionColor = (contribution) => {
+    const colors = {
+      'Full Stack': 'bg-purple-500/20 text-purple-300 border-purple-500/30',
+      'Frontend': 'bg-blue-500/20 text-blue-300 border-blue-500/30',
+      'Backend': 'bg-green-500/20 text-green-300 border-green-500/30',
+      'Solo': 'bg-amber-500/20 text-amber-300 border-amber-500/30'
+    };
+    return colors[contribution] || 'bg-gray-500/20 text-gray-300 border-gray-500/30';
+  };
+
+  const getCompanyColor = (company) => {
+    const colors = {
+      'Websoft Technology': 'bg-cyan-500/20 text-cyan-300 border-cyan-500/30',
+      'Personal Project': 'bg-pink-500/20 text-pink-300 border-pink-500/30',
+      'Academic Project': 'bg-indigo-500/20 text-indigo-300 border-indigo-500/30'
+    };
+    return colors[company] || 'bg-teal-500/20 text-teal-300 border-teal-500/30';
+  };
 
   return (
-    <div className='bg-gradient-to-br from-sky-950 via-gray-900 antialiased to-sky-950'>
-        <div style={{
-      backgroundImage: `url(${overlay})`,
-      backgroundRepeat: 'no-repeat',
-      backgroundPositionX: '60%',
-      backgroundPositionY: '40%',
-      backgroundSize: 'cover',
-
-    }}>
-        <div className=''>
-            <h1 className='pt-20 text-center text-xl md:text-4xl font-bold bg-gradient-to-r from-blue-800 to-teal-200 bg-clip-text antialiased font-sans text-transparent'>My Latest Projects</h1>
+    <div id="projects" className='bg-gradient-to-bl from-sky-950 via-gray-900 to-sky-950 min-h-screen'>
+      <div className='relative'>
+        <div className='pt-20 pb-8'>
+          <h1 className='text-center text-3xl md:text-5xl font-bold bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300 bg-clip-text text-transparent mb-6'>
+            My Latest Projects
+          </h1>
+          <p className='text-gray-400 text-center max-w-3xl mx-auto px-4 md:px-8 leading-relaxed'>
+            A collection of professional projects showcasing expertise in full-stack development,
+            from enterprise solutions to innovative platforms. Each project demonstrates attention
+            to detail, modern design principles, and robust functionality.
+          </p>
         </div>
-        <div className='mt-16 text-white text-center ml-64 mr-64 justify-center items-center flex'>
-            <p className='text-gray-400 antialiased hidden md:block'>I’ve developed a comprehensive LMS for efficient school management, streamlining administration and learning processes. Additionally, I created an eCommerce platform that enhances user experience.</p>
+
+        <div className="py-8 flex items-center justify-center">
+          <nav>
+            <ul className="flex flex-wrap items-center justify-center gap-4 px-4">
+              {tabs.map((tab) => (
+                <li key={tab.id}>
+                  <button
+                    onClick={() => setActiveTab(tab.label)}
+                    className={`
+                      relative px-6 py-2.5 rounded-full font-medium text-sm
+                      transition-all duration-300 ease-in-out
+                      ${activeTab === tab.label
+                        ? 'bg-gradient-to-r from-blue-600 to-cyan-600 text-white shadow-lg shadow-blue-500/50 scale-105'
+                        : 'bg-slate-800/50 text-gray-400 hover:text-white hover:bg-slate-800 border border-slate-700/50'}
+                    `}
+                  >
+                    {tab.label}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
-        <div className="text-center py-16 flex items-center justify-center mx-auto">
-      <nav className="mx-auto text-center">
-        <ul className="flex flex-wrap items-center gap-5 text-center">
-          {tabs.map((tab) => (
-            <li key={tab.id}>
-              <button
-                onClick={() => setActiveTab(tab.label)}
-                className={`
-                  relative px-5 py-1.5 rounded-full font-medium
-                  transition-all duration-300 ease-in-out text-center text-sm
-                  ${activeTab === tab.label 
-                    ? 'bg-[#0A1627] text-[#3B82F6] ring-1 ring-[#1D4ED8]/30  before:absolute before:inset-0 before:rounded-full before:ring-1 before:ring-[#3B82F6]/20 before:shadow-[0_0_8px_rgba(59,130,246,0.3)] before:-z-10' 
-                    : 'bg-[#0A1627] text-[#799ab5] hover:text-[#3B82F6] ring-1 ring-cyan-500/30'}
-                `}
-              >
-                {tab.label}
-              </button>
-            </li>
-          ))}
-        </ul>
-      </nav>
-    </div>
 
-    <div className="p-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {/* Flyer Design Card */}
-         <a href="https://cephasholdings.com" target="_blank">
-           <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src={cephas} 
-                alt="Flyer design"
-                className="w-full h-full relative object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute inset-0  bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">CEPHAS</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
-            </div>
-          </div>
-         </a>
+        <div className="px-4 md:px-8 pb-16">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project, index) => (
+                <a
+                  key={index}
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group block"
+                >
+                  <div className="relative rounded-2xl overflow-hidden bg-slate-900/50 border border-slate-800/50 hover:border-blue-500/50 transition-all duration-500 h-full flex flex-col">
+                    <div className="aspect-video relative overflow-hidden">
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/50 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500"></div>
 
-          {/* Banner Design Card */}
-          <a target='_blank' href="https://gssparkle.com/">
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-             <img 
-                src="https://gssparkle.com/storage/images/hero/1740641690.jpg" 
-                alt="Pattern design"
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-            
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out mb-2 text-gray-400 font-sans">GsSparkle</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
-            </div>
-          </div>
-          </a>
- 
-          {/* Disk Cover Card */}
-         <a href="https://gyhealthcare.my/" target='_blank'>
-         <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src={gyhealth}
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">GY Health-Care</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
-            </div>
-          </div>
-         </a>
+                      <div className="absolute inset-0 bg-gradient-to-t from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-          {/* Pattern Design Card */}
-          <a target='_blank' href="https://bahik.tech">
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-             <img 
-                src="https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png" 
-                alt="Pattern design"
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-            
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out mb-2 text-gray-400 font-sans">Youtube Clone</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
-            </div>
-          </div>
-          </a>
-          {/* Logo Design Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
-          <div className="aspect-square relative">
-              <img 
-                src="https://edusuitepk.b-cdn.net/wp-content/uploads/2021/12/Fee-Management-.jpg" 
-                alt="Banner design"
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">Library Management System</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
-            </div>
-          </div>
+                      <div className="absolute top-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:scale-110">
+                        <div className="bg-blue-500 p-2 rounded-full shadow-lg">
+                          <ExternalLink className="w-4 h-4 text-white" />
+                        </div>
+                      </div>
+                    </div>
 
-          {/* Animal Pattern Card */}
-          <div className="group relative rounded-2xl overflow-hidden">
-            <div className="aspect-square relative">
-              <img 
-                src="https://asset.gecdesigns.com/img/isometric-illustration/the-future-of-retail-e-commerce-concept-vector-illustration-1682432685910-cover.webp" 
-                alt="Disk cover"
-                className="w-full h-full object-cover group-hover:scale-110 transition-all duration-1000 ease-in-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[rgba(0,0,0,1)]"></div>
-              <div className="absolute bottom-0 left-0 p-6">
-                <h3 className="text-2xl font-semibold mb-2 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out text-gray-400 font-sans">E-commerce</h3>
-                <p className="text-sm text-gray-400 opacity-50 group-hover:opacity-100 transition-all duration-1000 ease-in-out font-sans">
-                </p>
-              </div>
+                    <div className="p-6 flex-1 flex flex-col">
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getCompanyColor(project.company)}`}>
+                          {project.company}
+                        </span>
+                        <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getContributionColor(project.contribution)}`}>
+                          {project.contribution}
+                        </span>
+                      </div>
+
+                      <h3 className="text-xl font-bold text-white mb-3 group-hover:text-blue-400 transition-colors duration-300">
+                        {project.title}
+                      </h3>
+
+                      <p className="text-gray-400 text-sm leading-relaxed mb-4 flex-1">
+                        {project.description}
+                      </p>
+
+                      <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-800/50">
+                        {project.tags.map((tag, tagIndex) => (
+                          <span
+                            key={tagIndex}
+                            className="px-3 py-1 bg-slate-800/50 text-gray-300 rounded-lg text-xs font-medium hover:bg-slate-700/50 transition-colors duration-300"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    <div className="h-1 bg-gradient-to-r from-blue-600 to-cyan-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+                  </div>
+                </a>
+              ))}
             </div>
           </div>
         </div>
       </div>
     </div>
-    </div>
+  );
+};
 
-</div>
-  )
-
-}
-
-export default Project
+export default Project;

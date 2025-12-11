@@ -1,44 +1,50 @@
-
-import { Code, Palette, Globe, Smartphone,  Rocket, Megaphone } from 'lucide-react'
+import {
+  Code,
+  Server,
+  Globe,
+  MessagesSquare,
+  Smartphone,
+  Settings,
+} from "lucide-react";
 
 const Services = () => {
   const services = [
     {
       icon: <Code size={40} />,
-      title: "Web Development",
-      description: "Custom websites and web applications built with modern technologies and best practices for optimal performance."
+      title: "Full-Stack Web Development",
+      description: "Professional and scalable web applications using Laravel, React, and MERN Stack with clean and maintainable code."
     },
     {
-      icon: <Smartphone size={40} />,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications designed for seamless user experience across all devices."
-    },
-    {
-      icon: <Palette size={40} />,
-      title: "UI/UX Design",
-      description: "User-centered design solutions that combine aesthetics with functionality to create engaging digital experiences."
+      icon: <Server size={40} />,
+      title: "API Development",
+      description: "Secure and high-performance REST APIs using Laravel, Node.js, and NestJS including authentication, validation, and integrations."
     },
     {
       icon: <Globe size={40} />,
-      title: "Digital Strategy",
-      description: "Strategic planning and consultation to help businesses thrive in the digital landscape."
+      title: "Website Development",
+      description: "Responsive static and dynamic websites built with React and Laravel, optimized for performance and SEO."
     },
     {
-      icon: <Rocket size={40} />,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and deployment solutions to power your digital transformation."
+      icon: <MessagesSquare size={40} />,
+      title: "Real-Time Features",
+      description: "Real-time chat systems, messaging, and live notifications using Socket.IO and WebSockets."
     },
     {
-      icon: <Megaphone size={40} />,
-      title: "Digital Marketing",
-      description: "Result-driven digital marketing strategies to boost your online presence and reach target audiences."
+      icon: <Smartphone size={40} />,
+      title: "Frontend Development",
+      description: "Modern and interactive user interfaces using React, styled components, TailwindCSS, and animation libraries like GSAP."
+    },
+    {
+      icon: <Settings size={40} />,
+      title: "System Integration & Automation",
+      description: "Integration of external services such as payment gateways (eSewa), email verification systems, and backend automation."
     }
-  ]
+  ];
 
   return (
     <div className='min-h-screen w-full py-8 md:py-16  mt-[-70px] relative'>
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className='absolute inset-0 z-0 bg-cover bg-center bg-no-repeat'
         style={{
           backgroundImage: 'url("/api/placeholder/1920/1080")',
@@ -57,7 +63,7 @@ const Services = () => {
 
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8'>
           {services.map((service, index) => (
-            <div 
+            <div
               key={index}
               className='group relative p-6 rounded-2xl bg-gray-900/50 backdrop-blur-sm
                 border border-gray-800 hover:border-sky-500
@@ -68,15 +74,15 @@ const Services = () => {
                 <div className='text-sky-500 group-hover:text-sky-400 transition-colors duration-300'>
                   {service.icon}
                 </div>
-                
+
                 <h3 className='text-white text-xl md:text-2xl font-semibold group-hover:text-sky-400 transition-colors duration-300'>
                   {service.title}
                 </h3>
-                
+
                 <p className='text-gray-400 group-hover:text-gray-300 transition-colors duration-300 text-sm md:text-base leading-relaxed'>
                   {service.description}
                 </p>
-                
+
                 <div className='absolute bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300'>
                   <span className='text-sky-500 text-sm font-medium'>Learn More →</span>
                 </div>

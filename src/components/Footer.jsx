@@ -1,88 +1,113 @@
-import React from 'react';
-import { Code, Briefcase, User, Mail, Github, Linkedin, ExternalLink } from 'lucide-react';
+import { Mail, Github, Linkedin, ExternalLink, Phone, MapPin } from 'lucide-react';
 
 const Footer = () => {
-  const projects = [
-    {
-      title: "Project Showcase",
-      description: "Full-stack web applications built with modern technologies including React, Node.js, and MongoDB. Implemented real-time features and responsive design patterns.",
-      tech: ["Laravel", "Bootstrap", "React", "Node.js", "MongoDB", "Socket.IO", "Tailwind"],
-      icon: <Code className="w-6 h-6" />
-    },
-    {
-      title: "Work Experience",
-      description: "5+ years of professional experience developing scalable solutions. Led teams in delivering complex projects while maintaining high code quality standards.",
-      tech: ["Team Leadership", "Agile", "CI/CD", "Cloud Architecture"],
-      icon: <Briefcase className="w-6 h-6" />
-    },
-    {
-      title: "About Me",
-      description: "Passionate full-stack developer with a focus on creating intuitive user experiences. Constantly learning and adapting to new technologies.",
-      tech: ["Problem Solving", "Communication", "Quick Learning", "Creativity"],
-      icon: <User className="w-6 h-6" />
-    }
-  ];
-
   return (
-    <div className="bg-gradient-to-tr from-sky-950 via-gray-900 to-sky-950 h-auto py-12 px-4 sm:px-6 lg:px-8">
+    <footer className="bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 py-14 px-6">
       <div className="max-w-7xl mx-auto">
-        {/* Header Section */}
-        <div className="text-center mb-16 space-y-4">
-          <h1 className="text-4xl font-bold text-white mb-4 animate-fade-in">
-            Shikhar Web
-            <span className="text-sky-400">Developer Portfolio</span>
-          </h1>
-          <p className="text-gray-300 max-w-2xl mx-auto">
-            Building innovative web solutions with modern technologies
-          </p>
-          <div className="flex justify-center space-x-4">
-            <a href="https://github.com/shikharbahikmagar" target='_blank' className="text-sky-400 hover:text-sky-300 transition-colors">
-              <Github className="w-6 h-6" />
-            </a>
-            <a href="https://www.linkedin.com/in/shikhar-magar-70b2aa282/" target='_blank' className="text-sky-400 hover:text-sky-300 transition-colors">
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a href="#" className="text-sky-400 hover:text-sky-300 transition-colors">
-              <Mail className="w-6 h-6" />
+
+        {/* Top Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center md:text-left">
+
+          {/* Brand Section */}
+          <div className="space-y-4">
+            <h2 className="text-3xl font-bold text-white">
+              Shikhar
+              <span className="text-sky-400"> Web Developer</span>
+            </h2>
+            <p className="text-gray-300">
+              Creating modern, secure, and scalable web applications using Laravel, MERN, and modern web technologies.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex justify-center md:justify-start space-x-5 pt-3">
+              <a
+                href="https://github.com/shikharbahikmagar"
+                target="_blank"
+                className="text-gray-300 hover:text-sky-400 transition group"
+              >
+                <Github className="w-6 h-6 group-hover:scale-110 transition" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/in/shikhar-magar-70b2aa282/"
+                target="_blank"
+                className="text-gray-300 hover:text-sky-400 transition group"
+              >
+                <Linkedin className="w-6 h-6 group-hover:scale-110 transition" />
+              </a>
+
+              <a
+                href="mailto:shikharbahik5@gmail.com"
+                className="text-gray-300 hover:text-sky-400 transition group"
+              >
+                <Mail className="w-6 h-6 group-hover:scale-110 transition" />
+              </a>
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-white">Quick Links</h3>
+            <ul className="space-y-2 text-gray-300">
+              <li>
+                <a href="#about" className="hover:text-sky-400 transition">About Me</a>
+              </li>
+              <li>
+                <a href="#projects" className="hover:text-sky-400 transition">Projects</a>
+              </li>
+              <li>
+                <a href="#experience" className="hover:text-sky-400 transition">Experience</a>
+              </li>
+              <li>
+                <a href="#skills" className="hover:text-sky-400 transition">Skills</a>
+              </li>
+              <li>
+              </li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h3 className="text-xl font-semibold text-white">Contact Info</h3>
+
+            <div className="flex items-center justify-center md:justify-start space-x-3 text-gray-300">
+              <Mail className="w-5 h-5 text-sky-400" />
+              <a href="mailto:shikharbahik5@gmail.com" className="hover:text-sky-400">shikharbahik5@gmail.com</a>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start space-x-3 text-gray-300">
+              <Phone className="w-5 h-5 text-sky-400" />
+              <span>+977-9864894584</span>
+            </div>
+
+            <div className="flex items-center justify-center md:justify-start space-x-3 text-gray-300">
+              <MapPin className="w-5 h-5 text-sky-400" />
+              <span>Pokhara, Nepal</span>
+            </div>
+
+            <a
+              href="/attached_assets/my_cv_1765258774082.pdf"
+              target="_blank"
+              className="inline-flex items-center space-x-2 text-sky-400 hover:text-sky-300 font-medium"
+            >
+              <ExternalLink className="w-5 h-5" />
+              <span>Download My CV</span>
             </a>
           </div>
+
         </div>
 
-        {/* Main Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {projects.map((project, index) => (
-            <div 
-              key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 transform hover:scale-105 transition-all duration-300 hover:shadow-xl hover:shadow-sky-500/20 group"
-            >
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="p-2 bg-sky-500/20 rounded-lg text-sky-400 group-hover:bg-sky-500/30 transition-colors">
-                  {project.icon}
-                </div>
-                <h2 className="text-xl font-semibold text-white">{project.title}</h2>
-              </div>
-              
-              <p className="text-gray-300 mb-4">
-                {project.description}
-              </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map((tech, techIndex) => (
-                  <span 
-                    key={techIndex}
-                    className="px-3 py-1 text-sm bg-sky-500/10 text-sky-400 rounded-full hover:bg-sky-500/20 transition-colors"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-            </div>
-          ))}
+        {/* Bottom Section */}
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center">
+          <p className="text-gray-400 text-sm">
+            © {new Date().getFullYear()} <span className="text-sky-400 font-medium">Shikhar Bahik</span>. All rights reserved.
+          </p>
         </div>
+
       </div>
-    </div>
+    </footer>
   );
 };
 
 export default Footer;
+

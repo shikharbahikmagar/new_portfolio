@@ -12,7 +12,7 @@ const MenuLink = ({ icon, text }) => (
     whileTap={{ scale: 0.98 }}
   >
     {icon && (
-      <motion.span 
+      <motion.span
         className="p-2 rounded-lg bg-sky-900 group-hover:bg-sky-800 transition-colors duration-300 border border-sky-700 group-hover:border-sky-500"
         whileHover={{ rotate: 5 }}
         whileTap={{ scale: 0.95 }}
@@ -51,7 +51,7 @@ const ContactForm = ({ isOpen, onClose }) => (
               <X className="w-6 h-6 text-gray-400 hover:text-white" />
             </button>
           </div>
-          
+
           <form className="space-y-4">
             <div>
               <label className="block text-gray-400 mb-2">Name</label>
@@ -98,7 +98,7 @@ const Navbar = () => {
   return (
     <>
       <div className='pt-6 bg-gradient-to-br from-sky-950 via-gray-900 to-sky-950 bg-transparent'>
-        <motion.nav 
+        <motion.nav
           className="bg-transparent"
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -107,7 +107,7 @@ const Navbar = () => {
           <div className="max-w-7xl mx-auto px-4">
             <div className="flex items-center justify-between h-20">
               {/* Logo */}
-              <motion.div 
+              <motion.div
                 className="flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
               >
@@ -130,28 +130,14 @@ const Navbar = () => {
                   Contact
                 </motion.button>
 
-                {/* Menu Toggle Button */}
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsOpen(!isOpen)}
-                  className="relative z-[11] p-3 rounded-full bg-sky-900 hover:bg-sky-800 transition-all duration-300 border border-sky-700 hover:border-sky-500 hover:shadow-lg hover:shadow-sky-900/20"
-                >
-                  {isOpen ? (
-                    <X className="h-6 w-6 text-white" />
-                  ) : (
-                    <Menu className="h-6 w-6 text-white" />
-                  )}
-                </motion.button>
               </div>
             </div>
           </div>
 
-         {/* Enhanced Sidebar with new design */}
-         <motion.div
-            className={`fixed top-0 right-0 h-auto z-10 sm:w-86 w-80 lg:w-[30em] transform transition-all duration-500 ease-out border-l border-sky-900/50 backdrop-blur-md ${
-              isOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
-            }`}
+          {/* Enhanced Sidebar with new design */}
+          <motion.div
+            className={`fixed top-0 right-0 h-auto z-10 sm:w-86 w-80 lg:w-[30em] transform transition-all duration-500 ease-out border-l border-sky-900/50 backdrop-blur-md ${isOpen ? 'translate-x-0 shadow-2xl' : 'translate-x-full'
+              }`}
             initial={{ x: "100%" }}
             animate={{ x: isOpen ? 0 : "100%" }}
             transition={{ type: "spring", damping: 20 }}
@@ -159,7 +145,7 @@ const Navbar = () => {
             {/* New Menu Layout */}
             <div className="h-full flex flex-col">
               {/* Top Section with Brand */}
-              <motion.div 
+              <motion.div
                 className="p-8 border-b border-sky-800/20"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -170,7 +156,7 @@ const Navbar = () => {
               </motion.div>
 
               {/* Menu Items with new styling */}
-              <motion.div 
+              <motion.div
                 className="flex-1 px-6 py-8 space-y-2 overflow-y-auto scrollbar-hide"
                 initial={{ opacity: 0, x: 20 }}
                 animate={{ opacity: 1, x: 0 }}
@@ -186,7 +172,7 @@ const Navbar = () => {
               </motion.div>
 
               {/* Footer with enhanced design */}
-              <motion.div 
+              <motion.div
                 className="p-8 border-t border-sky-800/20 bg-gradient-to-t from-sky-950/50"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -200,21 +186,20 @@ const Navbar = () => {
             </div>
           </motion.div>
           {/* Overlay */}
-              {/* Overlay */}
-              <div
+          {/* Overlay */}
+          <div
             onClick={() => setIsOpen(false)}
-            className={`fixed inset-0 bg-black/20 transition-opacity  duration-500 ${
-              isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-            }`}
+            className={`fixed inset-0 bg-black/20 transition-opacity  duration-500 ${isOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
+              }`}
           />
-    
-        </motion.nav>
+
+        </motion.nav >
 
         <Hero />
-      </div>
-      
+      </div >
+
       {/* Contact Form Modal */}
-      <ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
+      < ContactForm isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
     </>
   );
 };
