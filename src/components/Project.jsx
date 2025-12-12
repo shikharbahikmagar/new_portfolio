@@ -49,7 +49,7 @@ const Project = () => {
       company: "Websoft Technology",
       contribution: "Full Stack",
       country: "nepal",
-      image: "https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?w=800&q=80"
+      image: "https://scsn.org.np/storage/images/sliders/1753539375.jpg"
     },
     {
       title: "GY Healthcare",
