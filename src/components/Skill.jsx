@@ -1,14 +1,14 @@
-import React from 'react';
 import { Code, Server, Layout, Database, Palette, Terminal } from 'lucide-react';
 
 const Skills = () => {
   const skills = [
     { name: "React.js", category: "Frontend", icon: "Code" },
+    { name: "Next.js", category: "Frontend", icon: "Layout" },
     { name: "Laravel", category: "Backend", icon: "Server" },
     { name: "Next.js", category: "Framework", icon: "Layout" },
+    { name: "Laravel", category: "Framework", icon: "Server" },
     { name: "MySQL", category: "Database", icon: "Database" },
     { name: "TailwindCSS", category: "Styling", icon: "Palette" },
-    { name: "Node.js", category: "Backend", icon: "Terminal" },
   ];
 
   // Icon mapping
