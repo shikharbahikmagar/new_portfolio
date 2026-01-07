@@ -18,7 +18,7 @@ const Project = () => {
       link: "https://cephasholdings.com/",
       company: "Websoft Technology",
       contribution: "Full Stack",
-      country: "nepal",
+      country: "Nepal",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
     },
     {
@@ -28,7 +28,7 @@ const Project = () => {
       link: "https://gssparkle.com/",
       company: "Websoft Technology",
       contribution: "Full Stack",
-      country: "malaysia",
+      country: "Malaysia",
       image: "https://gssparkle.com/storage/images/hero/1740641690.jpg"
     },
     {
@@ -38,7 +38,7 @@ const Project = () => {
       link: "https://miracle.edu.np/",
       company: "Websoft Technology",
       contribution: "Full Stack",
-      country: "nepal",
+      country: "Nepal",
       image: "https://miracle.edu.np/storage/images/about/1755501868.jpg"
     },
     // {
@@ -58,7 +58,7 @@ const Project = () => {
       link: "https://gyhealthcare.my/",
       company: "Websoft Technology",
       contribution: "Contributed",
-      country: "malaysia",
+      country: "Malaysia",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
     },
     {
@@ -68,7 +68,7 @@ const Project = () => {
       link: "https://youtube-clone-ten-coral.vercel.app/",
       company: "Personal Project",
       contribution: "Solo",
-      country: "nepal",
+      country: "Nepal",
       image: "https://s3-alpha.figma.com/hub/file/1803556575/dddad4ab-afbe-4c4b-bfbd-5f872db64b12-cover.png"
     },
   ];
