@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, MapPin, Download, Github, Linkedin } from 'lucide-react';
 import profileImage from '../assets/professional.png'
 import overlay from '../assets/overlay.png';
@@ -11,7 +10,7 @@ const AboutMe = () => {
     title: "Full Stack Web Developer (Laravel & MERN)",
     email: "shikharbahik5@gmail.com",
     phone: "+977-9864894584",
-    location: "Pokhara, Nepal",
+    location: "Pokhara-Kaski, Nepal",
     website: "shikharbahik.com.np",
     cvLink: "/attached_assets/my_cv_1765258774082.pdf",
     social: {

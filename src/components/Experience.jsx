@@ -1,4 +1,3 @@
-import React from 'react';
 import { Briefcase, MapPin, Calendar } from 'lucide-react';
 
 const Experience = () => {
