@@ -25,11 +25,6 @@ const Services = () => {
       description: "Responsive static and dynamic websites built with React and Laravel, optimized for performance and SEO."
     },
     {
-      icon: <MessagesSquare size={40} />,
-      title: "Real-Time Features",
-      description: "Real-time chat systems, messaging, and live notifications using Socket.IO and WebSockets."
-    },
-    {
       icon: <Smartphone size={40} />,
       title: "Frontend Development",
       description: "Modern and interactive user interfaces using React, styled components, TailwindCSS, and animation libraries like GSAP."
