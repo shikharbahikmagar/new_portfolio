@@ -57,7 +57,7 @@ const Project = () => {
       tags: ["Healthcare", "Medical Services", "Platform"],
       link: "https://gyhealthcare.my/",
       company: "Websoft Technology",
-      contribution: "Contributed",
+      contribution: "Minor Contribution",
       country: "Malaysia",
       image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80"
     },
