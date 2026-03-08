@@ -4,10 +4,9 @@ const Skills = () => {
   const skills = [
     { name: "React.js", category: "Frontend", icon: "Code" },
     { name: "Next.js", category: "Frontend", icon: "Layout" },
-    { name: "Laravel", category: "Backend", icon: "Server" },
-    { name: "Next.js", category: "Framework", icon: "Layout" },
     { name: "Laravel", category: "Framework", icon: "Server" },
     { name: "MySQL", category: "Database", icon: "Database" },
+    { name: "PostgreSQL", category: "Database", icon: "Database" },
     { name: "TailwindCSS", category: "Styling", icon: "Palette" },
   ];
 

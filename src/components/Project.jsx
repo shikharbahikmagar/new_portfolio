@@ -6,8 +6,6 @@ const Project = () => {
 
   const tabs = [
     { id: 'all', label: 'All' },
-    { id: 'nepal', label: '🇳🇵 Nepal' },
-    { id: 'malaysia', label: '🇲🇾 Malaysia' }
   ];
 
   const projects = [
@@ -20,16 +18,6 @@ const Project = () => {
       contribution: "Full Stack",
       country: "Nepal",
       image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800&q=80"
-    },
-    {
-      title: "GS Sparkle Cleaning Services",
-      description: "Corporate website for a cleaning-service company — offering home and office cleaning, deep-cleaning, and commercial cleaning packages; booking and payments integrated.",
-      tags: ["Corporate", "Service Website", "Booking System"],
-      link: "https://gssparkle.com/",
-      company: "Websoft Technology",
-      contribution: "Full Stack",
-      country: "Malaysia",
-      image: "https://gssparkle.com/storage/images/hero/1740641690.jpg"
     },
     {
       title: "Miracle Institute",
