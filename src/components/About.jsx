@@ -18,7 +18,7 @@ const AboutMe = () => {
       linkedin: "https://linkedin.com/in/shikhar-bahik",
     },
     about:
-      "Full Stack Web Developer specializing in Laravel and MERN Stack with strong experience building systems, Focused on delivering secure, high-performance, and maintainable solutions."
+      "Full Stack Web Developer specializing in Laravel and MERN Stack with strong experience in building systems, Focused on delivering secure, high-performance, and maintainable solutions."
   };
 
   return (
