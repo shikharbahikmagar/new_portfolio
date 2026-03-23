@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import Navbar from './components/Navbar'
 import About from './components/About.jsx'
 import Education from './components/Education.jsx'
@@ -12,7 +11,6 @@ import Footer from './components/Footer'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
