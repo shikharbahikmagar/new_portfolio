@@ -6,7 +6,7 @@ const Experience = () => {
     {
       company: "Websoft Technology Nepal",
       role: "Laravel Intern",
-      period: "June 2024 – Oct 2024",
+      period: "June 2025 – Oct 2025",
       location: "Pokhara, Nepal",
       description: [
         "Assisted in developing Laravel-based applications.",
@@ -18,7 +18,7 @@ const Experience = () => {
     {
       company: "Websoft Technology Nepal",
       role: "Full Stack Web Developer",
-      period: "Oct 2024 – Present",
+      period: "Oct 2025 – Present",
       location: "Pokhara, Nepal",
       description: [
         "Develop full-stack applications using Laravel and React.",
