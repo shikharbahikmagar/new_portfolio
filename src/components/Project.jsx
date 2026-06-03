@@ -29,6 +29,37 @@ const Project = () => {
       country: "Nepal",
       image: "https://miracle.edu.np/storage/images/about/1755501868.jpg"
     },
+
+    {
+      title: "Veltronic Security Management System",
+      description: "Comprehensive security guard and workforce management platform for a security services provider in Malaysia. Features staff management, attendance tracking, deployment scheduling, operational monitoring, and administrative workflows for efficient security personnel management.",
+      tags: ["Security Services", "Staff Management", "Workforce Management", "Operations"],
+      link: "#",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "Malaysia",
+      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800&q=80"
+    },
+    {
+      title: "Jomsom Treks & Expedition",
+      description: "Modern trekking and tour booking platform for a Nepal-based adventure travel company. Redesigned and optimized the website with online tour booking capabilities, destination management, itinerary presentation, and customer inquiry handling for Himalayan trekking experiences. :contentReference[oaicite:0]{index=0}",
+      tags: ["Tourism", "Travel Booking", "Trekking", "Adventure Tours"],
+      link: "https://www.jomsomtreks.com.np/",
+      company: "Websoft Technology",
+      contribution: "Full Stack (Redesign & Enhancement)",
+      country: "Nepal",
+      image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80"
+    },
+    {
+      title: "Paschimanchal Dental Home",
+      description: "Professional website for a leading dental clinic in Pokhara, Nepal, offering information on dental services, specialists, appointments, and patient care. Assisted in the development and implementation of the platform, contributing to the delivery of a modern and informative healthcare website. :contentReference[oaicite:1]{index=1}",
+      tags: ["Healthcare", "Dental Clinic", "Medical Services", "Patient Care"],
+      link: "https://www.paschimanchaldentalhome.com.np/",
+      company: "Websoft Technology",
+      contribution: "Development Assistance",
+      country: "Nepal",
+      image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80"
+    },
     // {
     //   title: "Snake Conservation Society Nepal",
     //   description: "Non-profit organization website for snake conservation and awareness in Nepal — promoting snake rescue & relocation, human-snake conflict mitigation, research, and public awareness campaigns.",
