@@ -1,3 +1,3 @@
-# Shikhar Bahik Magar
+# Shikhar Bahik
 
 
