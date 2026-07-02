@@ -21,7 +21,7 @@ const Project = () => {
     },
     {
       title: "Miracle Institute",
-      description: "Educational consultancy/agency providing study-abroad services (USA, UK, Canada, Australia, New Zealand), visa guidance, test preparation (IELTS, TOEFL, SAT, GRE, GMAT, Duolingo).",
+      description: "Educational consultancy providing study-abroad services (USA, UK, Canada, Australia, New Zealand), visa guidance, test preparation (IELTS, TOEFL, SAT, GRE, GMAT, Duolingo).",
       tags: ["Education Portal", "Consultancy", "Test Preparation"],
       link: "https://miracle.edu.np/",
       company: "Websoft Technology",
