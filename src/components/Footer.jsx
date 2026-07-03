@@ -100,7 +100,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-10 pt-6 text-center">
           <p className="text-gray-400 text-sm">
-            © {new Date().getFullYear()} <span className="text-sky-400 font-medium">Shikhar Bahik Magar</span>. All rights reserved.
+            © {new Date().getFullYear()} <span className="text-sky-400 font-medium">Shikhar Bahik</span>. All rights reserved.
           </p>
         </div>
 
