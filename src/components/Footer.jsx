@@ -85,14 +85,14 @@ const Footer = () => {
               <span>Pokhara-Kaski, Nepal</span>
             </div>
 
-            <a
+            {/*<a
               href="/attached_assets/my_cv_1765258774082.pdf"
               target="_blank"
               className="inline-flex items-center space-x-2 text-sky-400 hover:text-sky-300 font-medium"
             >
               <ExternalLink className="w-5 h-5" />
               <span>Download My CV</span>
-            </a>
+            </a>*/}
           </div>
 
         </div>
