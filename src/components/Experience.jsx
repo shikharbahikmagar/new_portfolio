@@ -4,7 +4,7 @@ const Experience = () => {
 
   const experience = [
     {
-      company: "Websoft Technology Nepal",
+      company: "Jyotisoft",
       role: "Laravel Intern",
       period: "Sept 2025 – Dec 2025",
       location: "Pokhara, Nepal",
@@ -16,9 +16,9 @@ const Experience = () => {
       ]
     },
     {
-      company: "Websoft Technology Nepal",
+      company: "Jyotisoft",
       role: "Full Stack Web Developer",
-      period: "Jan 2026 – Present",
+      period: "Dec 2025 – Present",
       location: "Pokhara, Nepal",
       description: [
         "Develop full-stack applications using Laravel and React.",
