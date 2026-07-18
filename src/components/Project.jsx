@@ -60,16 +60,16 @@ const Project = () => {
       country: "Nepal",
       image: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=800&q=80"
     },
-    // {
-    //   title: "Snake Conservation Society Nepal",
-    //   description: "Non-profit organization website for snake conservation and awareness in Nepal — promoting snake rescue & relocation, human-snake conflict mitigation, research, and public awareness campaigns.",
-    //   tags: ["NGO Website", "Conservation", "Wildlife"],
-    //   link: "https://scsn.org.np/",
-    //   company: "Websoft Technology",
-    //   contribution: "Full Stack",
-    //   country: "nepal",
-    //   image: "https://scsn.org.np/storage/images/sliders/1753539375.jpg"
-    // },
+    {
+      title: "Snake Conservation Society Nepal",
+      description: "Non-profit organization website for snake conservation and awareness in Nepal — promoting snake rescue & relocation, human-snake conflict mitigation, research, and public awareness campaigns.",
+      tags: ["NGO Website", "Conservation", "Wildlife"],
+      link: "https://scsn.org.np/",
+      company: "Websoft Technology",
+      contribution: "Full Stack",
+      country: "nepal",
+      image: "https://scsn.org.np/storage/images/sliders/1753539375.jpg"
+    },
     {
       title: "GY Healthcare",
       description: "Healthcare platform providing comprehensive medical services and health management solutions.",
