@@ -9,7 +9,7 @@ const AboutMe = () => {
     name: "Shikhar Bahik",
     title: "Full Stack Web Developer (Laravel & MERN)",
     email: "shikharbahik5@gmail.com",
-    phone: "+977-9864894585",
+    phone: "+977-9864894584",
     location: "Pokhara-Kaski, Nepal",
     website: "shikharbahik.com.np",
     cvLink: "/attached_assets/my_cv_1765258774082.pdf",
