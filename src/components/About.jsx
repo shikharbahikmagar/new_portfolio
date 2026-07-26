@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Download, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
 import profileImage from '../assets/professional.png'
 import overlay from '../assets/overlay.png';
 
