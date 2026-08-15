@@ -7,7 +7,7 @@ const Experience = () => {
       company: "Jyotisoft",
       role: "Laravel Intern",
       period: "Sept 2025 – Dec 2025",
-      location: "Pokhara, Nepal",
+      location: "Kaski-Pokhara, Nepal",
       description: [
         "Assisted in developing Laravel-based applications.",
         "Implemented CRUD operations and backend logic.",
