@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, Github, Linkedin } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Download, Linkedin } from 'lucide-react';
 import profileImage from '../assets/professional.png'
 import overlay from '../assets/overlay.png';
 
@@ -12,7 +12,7 @@ const AboutMe = () => {
     phone: "+977-9864894584",
     location: "Pokhara-14, Kaski, Nepal",
     website: "shikharbahik.com.np",
-    cvLink: "/attached_assets/my_cv_1765258774082.pdf",
+    cvLink: "https://drive.google.com/file/d/1hizRa2OF3zNbRuZ5DZf-mm3emw-BSbuX/view?usp=drive_link",
     social: {
       github: "https://github.com/shikharbahikmagar",
       linkedin: "https://linkedin.com/in/shikhar-bahik",
@@ -96,13 +96,13 @@ const AboutMe = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              {/*<a
+              <a
                 href={personalInfo.cvLink}
                 className="inline-flex items-center px-6 py-3 bg-sky-500 text-white font-semibold rounded-lg hover:bg-sky-600 transition-all duration-300 shadow-lg hover:shadow-xl hover:shadow-sky-500/50 hover:scale-105"
               >
                 <Download className="w-5 h-5 mr-2" />
                 Download CV
-              </a> */}
+              </a>
               <a
                 href={personalInfo.social.github}
                 target="_blank"
