@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Menu, X, Phone, Code, User, Briefcase, Mail, Home, Send } from 'lucide-react';
+import { X, Phone, Code, User, Briefcase, Mail, Home, Send } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Hero from './Hero';
 
