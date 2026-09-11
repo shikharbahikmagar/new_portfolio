@@ -4,7 +4,7 @@ const Experience = () => {
 
   const experience = [
     {
-      company: "Jyotisoft",
+      company: "Jyotisoft Software Training Institute",
       role: "Laravel Intern",
       period: "Sept 2025 – Dec 2025",
       location: "Kaski-Pokhara, Nepal",
@@ -16,7 +16,7 @@ const Experience = () => {
       ]
     },
     {
-      company: "Jyotisoft",
+      company: "Jyotisoft Software Training Institute",
       role: "Full Stack Web Developer",
       period: "Dec 2025 – Present",
       location: "Pokhara, Nepal",
