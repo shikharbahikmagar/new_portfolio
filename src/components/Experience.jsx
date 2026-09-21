@@ -6,7 +6,7 @@ const Experience = () => {
     {
       company: "Jyotisoft Software Training Institute",
       role: "Laravel Intern",
-      period: "Sept 2025 – Dec 2025",
+      period: "Sept 2024 – Dec 2024",
       location: "Kaski-Pokhara, Nepal",
       description: [
         "Assisted in developing Laravel-based applications.",
@@ -18,7 +18,7 @@ const Experience = () => {
     {
       company: "Jyotisoft Software Training Institute",
       role: "Full Stack Web Developer",
-      period: "Dec 2025 – Present",
+      period: "Dec 2024 – Present",
       location: "Pokhara, Nepal",
       description: [
         "Develop full-stack applications using Laravel and React.",
