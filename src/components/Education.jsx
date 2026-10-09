@@ -10,7 +10,7 @@ const Education = () => {
     },
     {
       degree: "Diploma in Computer Engineering",
-      institution: "Pokhara Engineering College",
+      institution: "Pokhara Engineering College, Pokhara",
       year: "2016 – 2019"
     }
   ];
